@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="Kirsten Harrington Photography | About Me"
+    content="Kirsten Harrington Photography about me page that explains  how I got into photography"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <title> Kirsten Harrington Photography | About Me</title>
+   <link rel="icon" type="image/png" href="images/Kirsten%20Harrington%20photography%20logo%20(Logo)%20-%202.PNG">
+
+  <style>
+    :root {
+      --ink: #163a5a;
+      --ink-soft: #4f6d86;
+      --sky: #edf6fb;
+      --sky-deep: #dfeef8;
+      --line: rgba(22, 58, 90, 0.14);
+      --white: #ffffff;
+      --button: #4f7a9a;
+      --button-hover: #3d6481;
+      --shadow: 0 20px 50px rgba(22, 58, 90, 0.08);
+      --container: min(1120px, calc(100% - 48px));
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.95), transparent 35%),
+        linear-gradient(180deg, #f7fbfe 0%, #edf6fb 55%, #e7f2f9 100%);
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -100px;
+      background: var(--ink);
+      color: var(--white);
+      padding: 10px 14px;
+      border-radius: 999px;
+      z-index: 1000;
+    }
+
+    .skip-link:focus {
+      top: 16px;
+    }
+
+
+
+
+    .page-section {
+      width: var(--container);
+      margin: 0 auto;
+      padding: 96px 0;
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: 0.78rem;
+      color: var(--ink-soft);
+      font-weight: 700;
+    }
+
+    h1, h2, p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin-bottom: 24px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      color: var(--ink);
+    }
+
+    .about-copy p {
+      max-width: 520px;
+      color: var(--ink-soft);
+      font-size: 1.02rem;
+      margin-bottom: 18px;
+    }
+
+    .signature {
+      margin-top: 28px;
+      font-family: "Brush Script MT", "Segoe Script", cursive;
+      font-size: 2.4rem;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .contact-band {
+      text-align: center;
+      padding: 58px 20px 70px;
+      background: linear-gradient(180deg, rgba(223,238,248,0.7), rgba(237,246,251,0.95));
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-band .eyebrow {
+      color: var(--ink-soft);
+      margin-bottom: 14px;
+    }
+
+    .contact-band h2 {
+      margin: 0 0 28px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 400;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      color: var(--ink);
+      line-height: 1.1;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 28px;
+      background: var(--button);
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.72rem;
+      font-weight: 800;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--button-hover);
+      transform: translateY(-2px);
+    }
+
+    .site-footer {
+      width: var(--container);
+      margin: 0 auto;
+      padding: 30px 0 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      color: var(--ink-soft);
+    }
+
+    .site-footer p {
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.72rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 0.9rem;
+    }
+
+    a:focus-visible,
+    .button:focus-visible {
+      outline: 3px solid rgba(79, 122, 154, 0.45);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 900px) {
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .about-image img {
+        height: 380px;
+      }
+
+      .nav-menu {
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      :root {
+        --container: min(100% - 28px, 1120px);
+      }
+      .site-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      .page-section {
+        padding: 68px 0;
+      }
+
+      .about-image img {
+        height: 280px;
+      }
+
+      .nav-menu {
+        padding: 0;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .signature {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+   <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+  <a href="index.html" class="logo" aria-label="Kirsten Harrington Photography homepage">
+  <img src="logoimages/Kirsten Harrington photography logo (Logo) copy.png" alt="Kirsten Harrington Photography logo" />
+</a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Work</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-section">
+      <div class="about-layout">
+        <div class="about-image">
+          <img
+            src="aboutmeimages/IMG_0487.JPG"
+            alt="Kirsten Harrington Profile Picture"
+          />
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow">About Me</p>
+          <h1>A storyteller<br>with a camera.</h1>
+
+          <p>
+            Hello, I am Kirsten Harrington. I am a senior at Concordia University Wisconsin, majoring in photography with a minor in mass communications. Through my photography, I focus on capturing the emotion of the moment in time. I fell in love with photography during COVID, and I got my first camera a couple of years later. I love capturing emotion, whether it is someone laughing or a sunrise on the lake; I want the audience to feel something.
+            
+          </p>
+
+          <div class="signature">Kirsten Harrington</div>
+        </div>
+      </div>
+    </section>
+<section class="contact-band" id="contact">
+  <p class="eyebrow">Let’s Work Together</p>
+  <h2>Have a project in mind?</h2>
+
+  <a href="mailto:kirstenharringtonphotography@gmail.com" class="button filled-button">
+    Get in touch
+    <span aria-hidden="true">→</span>
+  </a>
+</section>
+   
+  </main>
+
+  <footer class="site-footer">
+  <p>
+    &copy; <span id="current-year"></span> Kirsten Harrington Photography 
+  </p>
+
+    <div class="footer-links">
+      <a href="mailto:kirstenharringtonphotography@gmail.com">Email</a>
+      <a href="https://www.instagram.com/kirstenharringtonphotography/" aria-label="Instagram profile">Instagram</a>
+      <a href="https://www.linkedin.com/in/kirsten-harrington-photography/?trk=public-profile-join-page" aria-label="LinkedIn profile">LinkedIn</a>
+    </div>
+  </footer>
+    <script src="script.js"></script>
+</body>
+</html>
